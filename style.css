@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 50px auto;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px #e94653 solid;
+}
+
+#title {
+  color: #459e85;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px #e94653 solid;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  height: 100vh;
+  background-image: url('images/background.jpg');
+  background-position: center center;
+  background-size: cover;
+  border: 1px #e94653 solid;
+}
+
+#header {
+  height: 10vh;
+  font-size: 24px;
+  align-items: center;
+  color: white;
+  border: 1px #e94653 solid;
+}
+
+#subheader {
+  height: 10vh;
+  font-size: 18px;
+  color: white;
+  border: 1px #e94653 solid;
+}
+
+#cards-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px #e94653 solid;
+}
+
+#card-search {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+}
+
+#card-results {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+}
