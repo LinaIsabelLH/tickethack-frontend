@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickethack</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.3/moment.min.js"></script>
   </head>
   <body>
     <div id="container">
@@ -22,7 +23,12 @@
           </p>
         </div>
         <div id="cards-container">
-          <div id="card-search">Search</div>
+          <div id="card-search">
+            <input id="departure-search" placeholder="Departure"/>
+            <input id="arrival-search" placeholder="Arrival"></input>
+            <input id="date-search" type="date" ></input>
+            <button id="btn-search">Search</button>
+          </div>
           <div id="card-results">Results</div>
         </div>
       </div>
