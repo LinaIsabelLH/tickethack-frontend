@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickethack</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.3/moment.min.js"></script>
   </head>
   <body>
     <div id="container">
       <div id="menu">
         <div id="title">Tickethack</div>
-        <div>Cart</div>
-        <div>Booking</div>
+        <div id="nav-buttons">
+          <div>Cart</div>
+          <div>Booking</div>
+        </div>
       </div>
       <div id="content">
         <div id="header"><p>Explore the world effortlessly by train</p></div>
@@ -29,7 +34,10 @@
             <input id="date-search" type="date" ></input>
             <button id="btn-search">Search</button>
           </div>
-          <div id="card-results">Results</div>
+          <div id="card-results">
+            <div id="not-found-icon"> <img src="images/notfound.png" alt="Trip not found"> </div>
+            <div class="raleway">No trip found.</div>            
+          </div>
         </div>
       </div>
     </div>
