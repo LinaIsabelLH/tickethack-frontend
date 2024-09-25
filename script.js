@@ -1,4 +1,5 @@
 const API_KEY = 'http://localhost:3000/trips';
+const API_KEY_BASKETS = 'http://localhost:3000/baskets';
 
 const noTripHTML = `
             <img id="not-found-icon" src="images/notfound.png" alt="Trip not found">
@@ -8,6 +9,27 @@ const noTripHTML = `
 const tripHTML = `
  `;
 
+const addBookingListeners = function () {
+  const btns = document.querySelectorAll('.btn-book');
+  for (b of btns) {
+    b.addEventListener('click', function () {
+      const id = this.parentNode.id;
+      console.log(id);
+
+      fetch(`${API_KEY_BASKETS}/${id}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log(data);
+          document.location.href = './cart.html';
+        });
+    });
+  }
+};
+
+// Add search event
 document.querySelector('#btn-search').addEventListener('click', function () {
   console.log(document.querySelector('#date-search').value);
 
@@ -49,6 +71,8 @@ document.querySelector('#btn-search').addEventListener('click', function () {
           </div>
           `;
         }
+
+        addBookingListeners();
       } else {
         // no results
         document.querySelector('#card-results').innerHTML = noTripHTML;
