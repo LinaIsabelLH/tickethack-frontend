@@ -13,10 +13,12 @@
   <body>
     <div id="container">
       <div id="menu">
-        <div id="title">Tickethack</div>
+        <div id="title">          
+          <a href="">Tickethack</a>
+        </div>
         <div id="nav-buttons">
-          <div>Cart</div>
-          <div>Booking</div>
+          <a href="./cart.html">Cart</a>
+          <a href="./booking.html">Booking</a>
         </div>
       </div>
       <div id="content">
@@ -29,14 +31,16 @@
         </div>
         <div id="cards-container">
           <div id="card-search">
-            <input id="departure-search" placeholder="Departure"/>
-            <input id="arrival-search" placeholder="Arrival"></input>
-            <input id="date-search" type="date" ></input>
-            <button id="btn-search">Search</button>
+            <div class="" id="cities-search">
+              <input id="departure-search" class="input-search raleway" placeholder="Departure"/>
+              <input id="arrival-search" class="input-search raleway" placeholder="Arrival"></input>
+            </div>
+            <input id="date-search" class="input-search raleway" type="date" ></input>
+            <button id="btn-search" class="input-search raleway">Search</button>
           </div>
           <div id="card-results">
              <img id="not-found-icon" src="images/train.png" alt="Go for it !">
-            <div class="raleway">It's time to book your future trip.</div>            
+            <div class="raleway" id="not-found-text">It's time to book your future trip.</div>            
           </div>
         </div>
       </div>

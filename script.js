@@ -2,16 +2,11 @@ const API_KEY = 'http://localhost:3000/trips';
 
 const noTripHTML = `
             <img id="not-found-icon" src="images/notfound.png" alt="Trip not found">
-            <div class="raleway">No trip found.</div>            
+            <div class="raleway" id="not-found-text">No trip found.</div>            
 `;
 
-// const tripHTML = `
-//       <div>
-//         ${data.trips[0].departure} > ${data.trips[0].arrival} ${date.format(
-//   'h:mm:ss'
-// )}
-//       </div>
-// `;
+const tripHTML = `
+ `;
 
 document.querySelector('#btn-search').addEventListener('click', function () {
   console.log(document.querySelector('#date-search').value);
@@ -43,12 +38,14 @@ document.querySelector('#btn-search').addEventListener('click', function () {
           let price = trip.price;
           let time = trip.time;
 
+          let id = trip._id;
+
           document.querySelector('#card-results').innerHTML += `
-          <div class="result-trip raleway">
+          <div class="result-trip raleway" id="${id}">
             <div>${dep} > ${arr}</div>
             <div>${time}</div>
             <div>${price}€</div>
-            <button type="button" class="btn-book"></button>
+            <button type="button" class="btn-book">Book !</button>
           </div>
           `;
         }
